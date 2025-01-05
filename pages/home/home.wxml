@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="top-section">
+    <view class="lessons">
+    <text class="lessons-header">最新課程</text>
+    <view class="lessons-body">
+      <view class="lessons-left">
+        <text>如何成全一個合格的月嫂</text>
+      </view>
+      <view class="lessons-middle">
+        <view class="lessons-middle-top">
+          <text>如何製作正宗的香港豬腳姜</text>
+        </view>
+        <view class="lessons-middle-bottom">
+          <text>如何正確抱小孩</text>
+        </view>
+      </view>
+      <view class="lessons-right">
+        <view class="lessons-right-top">
+          <text>如何催乳</text>
+        </view>
+        <view class="lessons-right-bottom">
+          <text>新手爸爸應該做什麽</text>
+        </view>
+      </view>
+    </view>
+    </view>
+
+    <view class="news">
+      <text class="new-header">最新资讯</text>
+      <view class="news-ul">
+        <text class="news-li">一個合格的月嫂需要有什麽資質</text>
+        <text class="news-li">寶媽懷孕時一定不要忽略這些營養</text>
+        <text class="news-li">讓孩子贏在胎教上</text>
+        <text class="news-li">悉尼有哪些學區</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="montherSitter-ul">
+    <view class="montherSitter-li" wx:for="{{sitterList}}" wx:key="index">
+      <view class="motherSitter-avatar"/>
+
+      <view class="motherSitter-details">
+        <view>{{item.name}}</view>
+        <view>{{item.age}}</view>
+        <view>{{item.experience}}</view>
+        <view>{{item.introduction}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

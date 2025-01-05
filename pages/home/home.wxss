@@ -1,0 +1,123 @@
+page {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  background-color: #DEEADA;
+  padding:30rpx;
+  margin-bottom: 50px;
+}
+
+.lessons,
+.news {
+  background-color: white;
+  border-radius: 5px;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+  margin-bottom: 56rpx;
+}
+
+.lessons-header,
+.new-header {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.lessons-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lessons-left,
+.lessons-middle,
+.lessons-right
+{
+  width: 31%;
+}
+
+.lessons-left,
+.lessons-middle-top,
+.lessons-middle-bottom, 
+.lessons-right-top,
+.lessons-right-bottom {
+  border-radius: 10px;
+  padding-inline: 20rpx;
+  padding-top: 10px
+}
+
+.lessons-left > text,
+.lessons-middle-top > text,
+.lessons-middle-bottom > text,
+.lessons-right-top > text,
+.lessons-right-bottom > text {
+  font-weight: bolder;
+  color: white;
+}
+
+.lessons-left,
+.lessons-middle-top,
+.lessons-middle-bottom,
+.lessons-right-top,
+.lessons-right-bottom {
+  background-color:rgb(92, 90, 90);
+}
+
+.lessons-left {
+  height: 300rpx;
+}
+
+.lessons-middle,
+.lessons-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lessons-middle-bottom,
+.lessons-middle-top,
+.lessons-right-top,
+.lessons-right-bottom {
+  height: 48%;
+}
+
+.news-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx;
+}
+
+.news-li {
+  border: 1px solid #F4F1EC;
+  border-radius: 10px;
+  padding: 30rpx 15rpx;
+}
+
+.montherSitter-ul {
+  padding-inline: 20rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.montherSitter-li {
+  background-color: #F4F1EC;
+  border-radius: 5px;
+  padding: 20rpx;
+  display: flex;
+  gap: 25rpx
+}
+
+.motherSitter-avatar {
+  height: 250rpx;
+  background-color: violet;
+  width: 30%
+}
+
+.motherSitter-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
