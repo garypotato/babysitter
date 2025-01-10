@@ -40,14 +40,14 @@
   </view>
   
   <view class="montherSitter-ul">
-    <view class="montherSitter-li" wx:for="{{sitterList}}" wx:key="index">
+    <view class="montherSitter-li" wx:for="{{sitterList}}" wx:key="id">
       <view class="motherSitter-avatar"/>
 
       <view class="motherSitter-details">
-        <view>{{item.name}}</view>
-        <view>{{item.age}}</view>
-        <view>{{item.experience}}</view>
-        <view>{{item.introduction}}</view>
+        <view>{{item.title}}</view>
+        <view>{{item.body_html}}</view>
+        <view>{{item.product_type}}</view>
+        <view>{{item.status}}</view>
       </view>
     </view>
   </view>
