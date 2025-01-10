@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
+  <image class="img" src="/assets/images/hero-1.png" alt="Banner1" />
+
   <view class="top-section">
     <view class="lessons">
     <text class="lessons-header">最新課程</text>
