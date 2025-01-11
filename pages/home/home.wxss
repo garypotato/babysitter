@@ -12,7 +12,6 @@ page {
 .top-section {
   background: linear-gradient(to bottom, white 8%, #DEEADA 30%, #DEEADA 100%);
   padding:30rpx;
-  margin-bottom: 50px;
   margin-top: -100px;
 }
 
@@ -106,14 +105,20 @@ page {
   padding: 30rpx 15rpx;
 }
 
-.montherSitter-ul {
+.bannerImage {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 5vw;
+}
+
+.sitter-ul {
   padding-inline: 20rpx;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.montherSitter-li {
+.sitter-li {
   background-color: #F4F1EC;
   border-radius: 5px;
   padding: 20rpx;
@@ -121,13 +126,13 @@ page {
   gap: 25rpx
 }
 
-.motherSitter-avatar {
+.sitter-avatar {
   height: 250rpx;
   background-color: violet;
   width: 30%
 }
 
-.motherSitter-details {
+.sitter-details {
   display: flex;
   flex-direction: column;
   gap: 8px

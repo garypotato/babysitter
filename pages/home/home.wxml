@@ -38,12 +38,26 @@
       </view>
     </view>
   </view>
-  
-  <view class="montherSitter-ul">
-    <view class="montherSitter-li" wx:for="{{sitterList}}" wx:key="id">
-      <view class="motherSitter-avatar"/>
 
-      <view class="motherSitter-details">
+  <image 
+    src="/assets/images/sitterBanner.jpg"
+    class="bannerImage"
+  />
+  
+  <view wx:if="{{sitterLoading}}">
+    <text>Loading...</text>
+  </view>
+  <view wx:if="{{!sitterLoading}}" class="sitter-ul">
+    <view 
+      class="sitter-li" 
+      wx:for="{{sitterList}}" 
+      wx:key="id"  
+      bindtap="handleItemClick" 
+      data-id="{{item.id}}"
+    >
+      <view class="sitter-avatar"/>
+
+      <view class="sitter-details">
         <view>{{item.title}}</view>
         <view>{{item.body_html}}</view>
         <view>{{item.product_type}}</view>

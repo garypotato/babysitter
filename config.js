@@ -1,0 +1,6 @@
+const config = {
+  shopify_admin_URL: "https://shopify-admin-pi.vercel.app/",
+  _vercel_jwt: "_vercel_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJXQ21ORjlaZmh2YnFVT0FIandqUmFPV1kiLCJpYXQiOjE3MzY1NzUzNTcsIm93bmVySWQiOiJ0ZWFtX1A4MjhJSG04cUhpODdud1k5UWZXZVVvQiIsImF1ZCI6InNob3BpZnktYWRtaW4tanlvNWJ4c2YyLWdhcnljaGVucy1wcm9qZWN0cy52ZXJjZWwuYXBwIiwidXNlcm5hbWUiOiJnYXJ5cG90YXRvNjY2LWdtYWlsY29tIiwic3ViIjoic3NvLXByb3RlY3Rpb24ifQ.AnECHu3XCmV-W_0xAdLMT_iAQmgh73bzEL5Vq5qXocg"
+};
+
+module.exports = config;

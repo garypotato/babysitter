@@ -3,10 +3,8 @@
     "pages/home/home",
     "pages/news/news",
     "pages/lessons/lessons",
-    "pages/mother/mother",
-    "pages/motherSitter/motherSitter",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/nanny/nanny",
+    "pages/index/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -34,14 +32,6 @@
       {
         "pagePath": "pages/lessons/lessons", 
         "text": "课程"
-      },
-      {
-        "pagePath": "pages/mother/mother", 
-        "text": "宝妈"
-      },
-      {
-        "pagePath": "pages/motherSitter/motherSitter", 
-        "text": "月嫂"
       }
     ]
   }
