@@ -1,68 +1,119 @@
 <!--index.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
-  <image class="img" src="/assets/images/hero-1.png" alt="Banner1" />
+  <image class="hero_imge" src="/assets/images/hero.png" alt="hero" />
 
-  <view class="top-section">
-    <view class="lessons">
-    <text class="lessons-header">最新課程</text>
-    <view class="lessons-body">
-      <view class="lessons-left">
-        <text>如何成全一個合格的月嫂</text>
-      </view>
-      <view class="lessons-middle">
-        <view class="lessons-middle-top">
-          <text>如何製作正宗的香港豬腳姜</text>
-        </view>
-        <view class="lessons-middle-bottom">
-          <text>如何正確抱小孩</text>
-        </view>
-      </view>
-      <view class="lessons-right">
-        <view class="lessons-right-top">
-          <text>如何催乳</text>
-        </view>
-        <view class="lessons-right-bottom">
-          <text>新手爸爸應該做什麽</text>
-        </view>
-      </view>
-    </view>
+  <!-- latest news -->
+  <text class='section-header'>最新资讯</text>
+  <view class='news-ul'>
+    <view class='news-li'>
+      <image 
+        src="/assets/images/new1.png"
+        class="news-img"
+      />
+      <text class="news-title">
+        Tip: Ask for Certifications
+      </text>
     </view>
 
-    <view class="news">
-      <text class="new-header">最新资讯</text>
-      <view class="news-ul">
-        <text class="news-li">一個合格的月嫂需要有什麽資質</text>
-        <text class="news-li">寶媽懷孕時一定不要忽略這些營養</text>
-        <text class="news-li">讓孩子贏在胎教上</text>
-        <text class="news-li">悉尼有哪些學區</text>
+    <view class='news-li'>
+      <image 
+        src="/assets/images/new1.png"
+        class="news-img"
+      />
+      <text class="news-title">
+        Tip: Ask for Certifications
+      </text>
+    </view>
+
+    <view class='news-li'>
+      <image 
+        src="/assets/images/new1.png"
+        class="news-img"
+      />
+      <text class="news-title">
+        Tip: Ask for Certifications
+      </text>
+    </view>
+
+    <view class='news-li'>
+      <image 
+        src="/assets/images/new1.png"
+        class="news-img"
+      />
+      <text class="news-title">
+        Tip: Ask for Certifications
+      </text>
+    </view>
+  </view>
+
+  <!-- latest lessons -->
+  <text class='section-header'>新手课程</text>
+  <view >
+    <view class='lessons-li'>
+      <view class='lesson-li-left'>
+        <image src="/assets/images/lesson1.png" class="lesson-img"/>
+        <view class='lesson-li-left-body'>
+          <text class='li-header'>The ABCs of Sleep</text>
+          <text class="li-sub-header">Nanny Lorraine</text>
+        </view>
       </view>
+      <button class="lesson-li-button">Watch lesson</button>
+    </view>
+    <view class='lessons-li'>
+      <view class='lesson-li-left'>
+        <image src="/assets/images/lesson1.png" class="lesson-img"/>
+        <view class='lesson-li-left-body'>
+          <text class='li-header'>The ABCs of Sleep</text>
+          <text class="li-sub-header">Nanny Lorraine</text>
+        </view>
+      </view>
+      <button class="lesson-li-button">Watch lesson</button>
+    </view>
+    <view class='lessons-li'>
+      <view class='lesson-li-left'>
+        <image src="/assets/images/lesson1.png" class="lesson-img"/>
+        <view class='lesson-li-left-body'>
+          <text class='li-header'>The ABCs of Sleep</text>
+          <text class="li-sub-header">Nanny Lorraine</text>
+        </view>
+      </view>
+      <button class="lesson-li-button">Watch lesson</button>
     </view>
   </view>
 
-  <image 
-    src="/assets/images/sitterBanner.jpg"
-    class="bannerImage"
-  />
-  
-  <view wx:if="{{sitterLoading}}">
-    <text>Loading...</text>
-  </view>
-  <view wx:if="{{!sitterLoading}}" class="sitter-ul">
-    <view 
-      class="sitter-li" 
-      wx:for="{{sitterList}}" 
-      wx:key="id"  
-      bindtap="handleItemClick" 
-      data-id="{{item.id}}"
-    >
-      <view class="sitter-avatar"/>
-
-      <view class="sitter-details">
-        <view>{{item.title}}</view>
-        <view>{{item.body_html}}</view>
-        <view>{{item.product_type}}</view>
-        <view>{{item.status}}</view>
+  <!-- sitters  -->
+  <text class='section-header'>金牌月嫂</text>
+  <view>
+    <view class="sitter-li">
+      <view class="sitter-li-left">
+        <image class="sitter-image" src='/assets/images/sitter1.png' alt='sitter1'/>
+        <view class="sitter-info">
+          <text class="li-header">Mary Poppins</text>
+          <text class="li-sub-header">Maternity Nanny</text>
+        </view>
       </view>
+      <button class="sitter-li-button">Hire</button>
+    </view>
+    <view class="sitter-li">
+      <view class="sitter-li-left">
+        <image class="sitter-image" src='/assets/images/sitter1.png' alt='sitter1'/>
+        <view class="sitter-info">
+          <text class="li-header">Mary Poppins</text>
+          <text class="li-sub-header">Maternity Nanny</text>
+        </view>
+      </view>
+      <button class="sitter-li-button">Hire</button>
+    </view>
+    <view class="sitter-li">
+      <view class="sitter-li-left">
+        <image class="sitter-image" src='/assets/images/sitter1.png' alt='sitter1'/>
+        <view class="sitter-info">
+          <text class="li-header">Mary Poppins</text>
+          <text class="li-sub-header">Maternity Nanny</text>
+        </view>
+      </view>
+      <button class="sitter-li-button">Hire</button>
     </view>
   </view>
+
 </scroll-view>
