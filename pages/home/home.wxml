@@ -3,52 +3,22 @@
   <image class="hero_imge" src="/assets/images/hero.png" alt="hero" />
 
   <!-- latest news -->
-  <text class='section-header'>最新资讯</text>
+  <text class='section-header'>相关资讯</text>
   <view class='news-ul'>
-    <view class='news-li'>
+    <view class='news-li' wx:for="{{newsList}}" wx:key="id">
       <image 
-        src="/assets/images/new1.png"
+        src="{{item.images[0].src}}"
         class="news-img"
       />
       <text class="news-title">
-        Tip: Ask for Certifications
-      </text>
-    </view>
-
-    <view class='news-li'>
-      <image 
-        src="/assets/images/new1.png"
-        class="news-img"
-      />
-      <text class="news-title">
-        Tip: Ask for Certifications
-      </text>
-    </view>
-
-    <view class='news-li'>
-      <image 
-        src="/assets/images/new1.png"
-        class="news-img"
-      />
-      <text class="news-title">
-        Tip: Ask for Certifications
-      </text>
-    </view>
-
-    <view class='news-li'>
-      <image 
-        src="/assets/images/new1.png"
-        class="news-img"
-      />
-      <text class="news-title">
-        Tip: Ask for Certifications
+        {{item.title}}
       </text>
     </view>
   </view>
 
   <!-- latest lessons -->
   <text class='section-header'>新手课程</text>
-  <view >
+  <view>
     <view class='lessons-li'>
       <view class='lesson-li-left'>
         <image src="/assets/images/lesson1.png" class="lesson-img"/>

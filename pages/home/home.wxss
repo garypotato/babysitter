@@ -1,6 +1,6 @@
 page {
   /* background-color: #deeada; */
-  background-color: #FFF8F0;
+  /* background-color: #FFF8F0; */
 }
 
 .hero_imge {
@@ -23,13 +23,13 @@ page {
   gap: 24rpx;
 }
 .news-li {
-  height: 605rpx;
   padding-bottom: calc(12 * 100vw / 390);
 }
 .news-img {
   width: calc(173 * 100vw / 390);
-  height: 462rpx;
+  height: calc(173 * 100vw / 390);
   margin-bottom: 24rpx;
+  border-radius: 12px;
 }
 .news-title {
   width: 100%;
