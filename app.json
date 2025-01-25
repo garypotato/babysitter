@@ -1,14 +1,11 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/news/news",
-    "pages/lessons/lessons",
-    "pages/nanny/nanny",
-    "pages/index/index"
+    "pages/news/news"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "澳洲媽媽",
+    "navigationBarTitleText": "澳新媽媽",
     "navigationBarBackgroundColor": "#F4F1EC"
   },
   "style": "v2",
@@ -28,10 +25,6 @@
       {
         "pagePath": "pages/news/news", 
         "text": "资讯"
-      },
-      {
-        "pagePath": "pages/lessons/lessons", 
-        "text": "课程"
       }
     ]
   }
