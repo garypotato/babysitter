@@ -3,8 +3,14 @@
   <image class="hero_imge" src="/assets/images/hero.png" alt="hero" />
 
   <!-- latest news -->
-  <text class='section-header'>相关资讯</text>
-  <view class='news-ul'>
+  <view class="section-header">
+    <text class="section-header-l">相关资讯</text>
+    <text class="section-header-r">更多资讯</text>
+  </view>
+  <view class="spinner-container" wx:if="{{newsLoading}}">
+    <view class="spinner"></view>
+  </view>
+  <view class='news-ul' wx:if="{{!newsLoading}}">
     <view class='news-li' wx:for="{{newsList}}" wx:key="id">
       <image 
         src="{{item.images[0].src}}"

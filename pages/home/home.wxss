@@ -8,12 +8,22 @@ page {
   height: 426rpx;
 }
 .section-header {
-  display: block;
+  display: flex;
   padding-inline: 32rpx;
   padding-top: 40rpx;
   padding-bottom: 24rpx;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section-header-l{
   font-size: 44rpx;
   font-weight: bold;
+}
+.section-header-r {
+  font-size: 30rpx;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 4rpx;
 }
 .news-ul {
   padding-block: 32rpx;
