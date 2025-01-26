@@ -1,0 +1,17 @@
+<!--logs.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="spinner-container" wx:if="{{newsLoading}}">
+    <view class="spinner"></view>
+  </view>
+  <view class='news-ul' wx:if="{{!newsLoading}}">
+    <view class='news-li' wx:for="{{newsList}}" wx:key="id">
+      <image 
+        src="{{item.images[0].src}}"
+        class="news-img"
+      />
+      <text class="news-title">
+        {{item.title}}
+      </text>
+    </view>
+  </view>
+</scroll-view>
