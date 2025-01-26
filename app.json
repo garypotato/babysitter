@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/newsList/newsList",
+    "pages/newsEach/newsEach",
     "pages/lessons/lessons"
   ],
   "window": {

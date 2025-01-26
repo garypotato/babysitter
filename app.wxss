@@ -19,6 +19,10 @@ navigator {
   box-sizing: border-box;
 }
 
+text {
+  line-height: normal;
+}
+
 /* spinner.wxss */
 .spinner-container {
   display: flex;

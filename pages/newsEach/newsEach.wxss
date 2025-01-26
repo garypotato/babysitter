@@ -1,0 +1,32 @@
+.eachNews {
+  padding-block: 60rpx;
+  padding-inline: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60rpx
+}
+
+.title {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+
+.news-sec-img {
+  width: calc(173 * 100vw / 390);
+  height: calc(173 * 100vw / 390);
+}
+
+.n_link {
+  padding-top: 60rpx;
+  display: flex;
+  flex-direction: column;
+}
+.n_link-title {
+ padding-bottom: 10rpx;
+}
+.n_link-link {
+  text-decoration: underline;
+  font-style: italic;
+}

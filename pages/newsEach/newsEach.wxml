@@ -1,0 +1,14 @@
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="spinner-container" wx:if="{{newsLoading}}">
+    <view class="spinner"></view>
+  </view>
+  <view class="eachNews" wx:if="{{!newsLoading}}">
+    <view class="title">{{news.title}}</view>
+    <image
+      class="news-sec-img"
+      wx:if="{{news.images[1].id}}"
+      src="{{news.images[1].src}}" alt="{{news.images[1].id}}" 
+    />
+    <rich-text nodes="{{news.body_html}}"></rich-text>
+  </view>
+</scroll-view>

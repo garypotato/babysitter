@@ -11,6 +11,7 @@
   gap: 30rpx;
   border: 1px solid lightgray;
   padding: 20rpx;
+  align-items: center;
 }
 .news-img {
   width: calc(90 * 100vw / 390);

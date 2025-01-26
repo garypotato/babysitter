@@ -11,7 +11,13 @@
     <view class="spinner"></view>
   </view>
   <view class='news-ul' wx:if="{{!newsLoading}}">
-    <view class='news-li' wx:for="{{newsList}}" wx:key="id">
+    <view 
+      class='news-li' 
+      wx:for="{{newsList}}" 
+      wx:key="id"     
+      bindtap="onLiClick"
+      data-key="{{item.id}}"
+    >
       <image 
         src="{{item.images[0].src}}"
         class="news-img"

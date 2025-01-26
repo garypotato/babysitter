@@ -1,5 +1,4 @@
 const config = require('../../config.js');
-const eventName = config.homePageMonitorGlobalData
 
 Page({
   data:{
@@ -7,29 +6,51 @@ Page({
     newsList: [],
   },
   onLoad() {
-    const app = getApp();
-    this.setData({
-      newsLoading: app.globalData.newsLoading,
-      newsList: app.globalData.newsList.slice(0,4),
+    wx.request({
+      url: `${config.shopify_admin_URL}/api/collections`,
+      method: 'GET',
+      header: {
+        'Content-Type': 'application/json',
+        cookie: config._vercel_jwt,
+      },
+      success: (res) => {
+        const newsCollection = res.data.data.find((collection) => collection.handle === 'news');
+        if (newsCollection) {
+          wx.request({
+            url: `${config.shopify_admin_URL}/api/products`,
+            method: 'POST',
+            header: {
+              'Content-Type': 'application/json',
+              cookie: config._vercel_jwt,
+            },
+            data: { collection_id: newsCollection.id, limit: 4 },
+            success: (res) => {
+              this.setData({
+                newsList: res.data.data,
+                newsLoading: false,
+              })
+            },
+            fail: () => {
+              this.updateGlobalData({ newsLoading: false });
+            },
+          });
+        } else {
+          this.updateGlobalData({ newsLoading: false });
+        }
+      },
+      fail: () => {
+        this.updateGlobalData({ newsLoading: false });
+      },
     });
-    // Add an event listener for globalData changes
-    this.globalDataChangeListener = (updatedGlobalData) => {
-      this.setData({ 
-        newsLoading: updatedGlobalData.newsLoading,
-        newsList: updatedGlobalData.newsList.slice(0,4), 
-      });
-    };
-    app.addEventListener(eventName, this.globalDataChangeListener);
-  },
-  onUnload() {
-    const app = getApp();
-    // Remove the event listener when the page is unloaded
-    app.removeEventListener(eventName, this.globalDataChangeListener);
   },
   goToMoreInfo() {
-    console.log('clicked')
     wx.navigateTo({
       url: '/pages/newsList/newsList',
     });
   },
+  onLiClick(e) {
+    wx.navigateTo({
+      url: `/pages/newsEach/newsEach?key=${e.currentTarget.dataset.key}`,
+    });
+  }
 });
