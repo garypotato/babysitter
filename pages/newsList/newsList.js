@@ -2,7 +2,7 @@ const config = require('../../config.js');
 const eventName = config.homePageMonitorGlobalData
 
 Page({
-  data:{
+  data: {
     newsLoading: true,
     newsList: [],
   },
@@ -10,13 +10,13 @@ Page({
     const app = getApp();
     this.setData({
       newsLoading: app.globalData.newsLoading,
-      newsList: app.globalData.newsList.slice(0,4),
+      newsList: app.globalData.newsList,
     });
     // Add an event listener for globalData changes
     this.globalDataChangeListener = (updatedGlobalData) => {
       this.setData({ 
         newsLoading: updatedGlobalData.newsLoading,
-        newsList: updatedGlobalData.newsList.slice(0,4), 
+        newsList: updatedGlobalData.newsList, 
       });
     };
     app.addEventListener(eventName, this.globalDataChangeListener);
@@ -26,10 +26,4 @@ Page({
     // Remove the event listener when the page is unloaded
     app.removeEventListener(eventName, this.globalDataChangeListener);
   },
-  goToMoreInfo() {
-    console.log('clicked')
-    wx.navigateTo({
-      url: '/pages/newsList/newsList',
-    });
-  },
-});
+})

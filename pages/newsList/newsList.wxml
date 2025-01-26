@@ -1,12 +1,5 @@
-<!--index.wxml-->
+<!--logs.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
-  <image class="hero_imge" src="/assets/images/hero.png" alt="hero" />
-
-  <!-- latest news -->
-  <view class="section-header">
-    <text class="section-header-l">相关资讯</text>
-    <text class="section-header-r" bindtap="goToMoreInfo">更多资讯</text>
-  </view>
   <view class="spinner-container" wx:if="{{newsLoading}}">
     <view class="spinner"></view>
   </view>

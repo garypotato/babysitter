@@ -1,3 +1,5 @@
+const config = require('./config.js');
+
 App({
   globalData: {
     newsLoading: true,
@@ -28,11 +30,12 @@ App({
   },
   // Update globalData and trigger events
   updateGlobalData(newData) {
+    const eventNames = [config.homePageMonitorGlobalData, config.newsPageMonitorGlobalData]
+
     Object.assign(this.globalData, newData);
-    this.triggerEvent('globalDataChange', this.globalData);
+    eventNames.forEach((eventName) => this.triggerEvent(eventName, this.globalData))
   },
   onLaunch() {
-    const config = require('./config.js');
     // get collections
     wx.request({
       url: `${config.shopify_admin_URL}/api/collections`,
@@ -51,7 +54,7 @@ App({
               'Content-Type': 'application/json',
               cookie: config._vercel_jwt,
             },
-            data: { collection_id: newsCollection.id, limit: 4 },
+            data: { collection_id: newsCollection.id },
             success: (res) => {
               this.updateGlobalData({
                 newsList: res.data.data,

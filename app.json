@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/news/news"
+    "pages/newsList/newsList",
+    "pages/lessons/lessons"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -23,8 +24,8 @@
         "text": "首页"    
       },
       {
-        "pagePath": "pages/news/news", 
-        "text": "资讯"
+        "pagePath": "pages/lessons/lessons", 
+        "text": "課程"
       }
     ]
   }

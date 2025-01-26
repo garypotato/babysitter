@@ -1,0 +1,19 @@
+.news-ul {
+  padding-block: 50rpx;
+  padding-inline: 20rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 40rpx
+}
+.news-li {
+  border-radius: 5px;
+  display: flex;
+  gap: 30rpx;
+  border: 1px solid lightgray;
+  padding: 20rpx;
+}
+.news-img {
+  width: calc(90 * 100vw / 390);
+  height: calc(90 * 100vw / 390);
+  border-radius: 10px;
+}

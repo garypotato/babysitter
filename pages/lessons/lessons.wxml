@@ -1,0 +1,4 @@
+<!--logs.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view>lessons</view>
+</scroll-view>
