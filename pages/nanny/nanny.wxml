@@ -1,4 +1,0 @@
-<!--logs.wxml-->
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view>nanny</view>
-</scroll-view>

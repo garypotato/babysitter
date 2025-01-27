@@ -46,31 +46,6 @@ page {
   font-size: 32rpx;
   font-weight: 600;
 }
-.lessons-li {
-  padding-inline: 32rpx;
-  padding-block: 16rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32rpx
-}
-.lesson-li-left{
-  display: flex;
-  gap: 32rpx;
-  justify-content: space-between;
-  align-items: center;
-  width: 442rpx;
-}
-.lesson-img {
-  width: calc(56 * 100vw / 390);
-  height: calc(56 * 100vw / 390);
-}
-.lesson-li-left-body {
-  width: calc(149 * 100vw / 390);
-}
-.lesson-li-left-body > text {
-  display: block;
-}
 .li-header {
   font-size: 32rpx;
   font-weight: 500;
@@ -79,48 +54,4 @@ page {
   font-size: 28rpx;
   color: #A1824A;
   font-weight: 300;
-}
-.lesson-li-button {
-  width: 248rpx;
-  height: 64rpx;
-  font-size: 28rpx;
-  border-radius: 50px;
-  background-color: #F5F0E5;
-  font-weight: 500;
-  padding: 0; 
-  padding-block: 12rpx;
-}
-.sitter-li {
-  padding-block: 24rpx;
-  padding-inline: 32rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.sitter-li-left {
-  display: flex;
-  gap: 32rpx;
-  align-items: center;
-  width: calc(179 * 100vw / 390);
-}
-.sitter-image {
-  width: calc(56 * 100vw / 390);
-  height: calc(75 * 100vw / 390);
-}
-.sitter-info {
-  width: calc(107 * 100vw / 390);
-}
-.sitter-info > text {
-  display: block;
-}
-.sitter-li-button {
-  width: 168rpx !important;
-  height: 64rpx;
-  font-size: 28rpx;
-  border-radius: 50px;
-  background-color: #F5F0E5;
-  font-weight: 500;
-  padding: 0; 
-  padding-block: 12rpx;
-  margin: 0 !important;
 }
